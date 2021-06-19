@@ -45,11 +45,12 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  for (const [key, value] of Object.entries(obj)) {
-    return value.includes(value1);
-  }
+  if (Object.values(obj).includes(value)) {
+    return true;
+} else {
+    return false;
+}
 
-};
 
 
 /* ------------------------------------------------------------------------------------------------
@@ -151,11 +152,17 @@ For example:
 hasChildrenValues(characters, 'Cersei') will return true
 hasChildrenValues(characters, 'Sansa') will return false
 ------------------------------------------------------------------------------------------------ */
-
 const hasChildrenValues = (arr, character) => {
-  // Solution code here...
 
-};
+  let x=false;
+
+  Object.values(arr).forEach(value => {
+  if(value.name === character && value.children){
+    x= true;
+  } 
+})
+  return x;
+}
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 7 - Stretch Goal
