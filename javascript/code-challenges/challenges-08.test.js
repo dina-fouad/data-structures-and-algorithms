@@ -87,7 +87,7 @@ For example:
 
 const isNum = (input) => {
   // Solution code here...
-  return (/[0-9]/).test(input));
+  return (/[0-9]/).test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
