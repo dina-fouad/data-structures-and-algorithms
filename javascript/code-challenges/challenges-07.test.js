@@ -49,7 +49,7 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
-  arr.join(' ');
+ return arr.join(' ');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -82,7 +82,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
-  arr.split('');
+ return arr.split('');
   
 };
 
