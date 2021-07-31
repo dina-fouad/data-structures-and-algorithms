@@ -3,7 +3,7 @@ Write a function called insertShiftArray which takes in an array and a value to 
 
 ## Whiteboard Process
 
-![](./code2.jpg)
+![](./rcode2.jpg)
 
 ## Approach & Efficiency
 create new array to add the new value to it it has linear time complexity and constant space complexity
