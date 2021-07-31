@@ -4,5 +4,5 @@ write a function to find the index of value inside a list
 
 ## Whiteboard Process
 
-![](./code3.jpg)
+![](./rcode3.jpg)
 

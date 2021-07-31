@@ -36,6 +36,7 @@ class LinkedList():
 
         current = self.head
         while current.value is not None:
+            print("d")
             if current.value == key:
 
                 return True
@@ -43,15 +44,4 @@ class LinkedList():
             current = current.next
         return False
 
-if __name__ == "__main__":
-  ll = LinkedList()
-  ll.insert(5)
-  ll.insert(4)
-  print(ll)
-  node1 =  Node(1)
-  node2 =  Node(2)
-  node3 = node1 + node2
-  print(node3)
 
-  for value in ll:
-    print(value)
