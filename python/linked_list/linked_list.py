@@ -82,3 +82,34 @@ def insertAfter(self, value, new_value):
         node.next = current.next
         current.next = node
 
+######## code challange 7 ##########
+
+def kthFromEnd(self,k):
+        current=self.head
+        length=1
+        while current.next:
+            length+=1
+            current=current.next
+        current=self.head
+        if k>= length:
+            return 'Error! index out of range'
+        elif k<0:
+            return "Error! k can't be negative number"
+        else:
+            count =length-k-1
+            for i in range(length):
+                    if i == count:
+                        return current.value
+                    current =current.next
+
+def kth(self,j):
+        current=self.head
+        val=[]
+        while current:
+            val+=[current.value]
+            current=current.next
+        val=val[::-1]
+
+        for i in range(len(val)):
+            if i==j:
+                return val[j]
