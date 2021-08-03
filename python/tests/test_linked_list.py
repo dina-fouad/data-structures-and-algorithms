@@ -91,3 +91,40 @@ def test_insertAfter_last():
     expected="49 -> 50 -> 40 -> 90 -> NULL"
     actual=test.__str__()
     assert actual==expected
+
+######## code challange 7 ##########
+def test_k_greater_than_L_length():
+    test =LinkedList()
+    test.append(90)
+    test.append(50)
+    test.insert_after(90,30)
+    excepted='Error! index out of range'
+    actual=test.kthFromEnd(4)
+    assert excepted==actual
+
+def  test_k_the_same():
+    test=LinkedList()
+    test.append(90)
+    test.append(50)
+    test.insert_after(90,30)
+    excepted='Error! index out of range'
+    actual=test.kthFromEnd(3)
+    assert excepted==actual
+    ######## code challange 8 ##########
+
+
+def test_linked_list_zipped_list():
+    test= LinkedList()
+    test.append(4)
+    test.append(-1)
+    test.append('s')
+    test.insertBefore(4, 5)
+    test.insertAfter(-1, 98)
+    test2= LinkedList()
+    test2.append(7)
+    test2.append(-8)
+    test2.insertAfter(7, 8)
+    actual = str(zipLists(test,test2))
+    actual = str((test,test2))
+    expected = "{5} ->{7} ->{4} ->{8} ->{-1} ->{-8} ->{98} ->{'s'} ->NULL"
+    assert actual == expected
