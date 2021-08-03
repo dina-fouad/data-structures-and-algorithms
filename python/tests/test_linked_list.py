@@ -110,5 +110,20 @@ def  test_k_the_same():
     excepted='Error! index out of range'
     actual=test.kthFromEnd(3)
     assert excepted==actual
+    ######## code challange 8 ##########
 
 
+def test_linked_list_zipped_list():
+    ll1= LinkedList()
+    ll1.append(4)
+    ll1.append(-1)
+    ll1.append('s')
+    ll1.insertBefore(4, 5)
+    ll1.insertAfter(-1, 98)
+    ll2= LinkedList()
+    ll2.append(7)
+    ll2.append(-8)
+    ll2.insertAfter(7, 8)
+    actual = str(zipLists(ll1,ll2))
+    expected = "{5} ->{7} ->{4} ->{8} ->{-1} ->{-8} ->{98} ->{'s'} ->NULL"
+    assert actual == expected  

@@ -1,4 +1,4 @@
- # define a class called Node
+# define a class called Node
 class Node:
   def __init__(self, value=""):
     self.value = value
@@ -86,7 +86,7 @@ def insertAfter(self, value, new_value):
 
 
 def kthFromEnd(self,k):
-    
+
         if k<0:
             return "Can't enter negative input"
         list=[]
@@ -100,5 +100,18 @@ def kthFromEnd(self,k):
             if k>=len(list):
                 return 'Exception'
             return list[(k*-1)-1]
+######## code challange 8 ##########
+def zipLists(ll1, ll2):
+    current1 = ll1.head
+    current2 = ll2.head
+    while current1 and current2:
+        save1 = current1.next
+        save2 = current2.next
 
+        current1.next = current2
+        current2.next = save1
 
+        current1 = save1
+        current2 = save2
+
+    return ll1
