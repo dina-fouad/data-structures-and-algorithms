@@ -2,7 +2,7 @@
 
 from linked_list.linked_list import LinkedList,Node
 
-def test_instance(): ## 1 ## 1
+def test_instance():
     ll = LinkedList()
     ll.insert(1)
     ll.insert(2)
@@ -28,7 +28,7 @@ def test_head():
 
 
 
-def test_fisrt_elment(): 
+def test_fisrt_elment():
     ll = LinkedList()
     ll.insert(1)
     ll.insert(2)
@@ -99,3 +99,49 @@ def test_insert_after():
     assert ll.__str__() == "{'7'} ->{'5'} ->{'6'} ->{'8'} ->"
 
     ########################77777############################################
+
+
+def test_LinkedList_kth_from():
+    ll = LinkedList()
+    ll.insert(2)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(1)
+    actual = ll.kth_from_end(0)
+    expected = 2
+    assert actual == expected
+
+def test_LinkedList_kth():
+    ll = LinkedList()
+    ll.insert(2)
+    ll.insert(8)
+    ll.insert(3)
+    ll.insert(1)
+    actual = ll.kth_from_end(2)
+    expected = 3
+    assert actual == expected
+
+def test_kth_negative():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    actual = ll.kth_from_end(-1)
+    assert actual == 'Negative '
+
+def test_linked_list_size_1():
+    ll = LinkedList()
+    ll.append(1)
+    actual = ll.kth_from_end(1)
+    expected = 1
+    assert actual == expected
+
+def test_happy():
+    ll = LinkedList()
+    ll.append(1)
+    ll.append(2)
+    ll.append(3)
+    actual = ll.kth_from_end(2)
+    expected = 1
+    assert actual == expected
+########################8888############################################

@@ -92,3 +92,21 @@ class LinkedList():
                     current = current.next
             return
 ########################777777############################################
+
+
+    def kth_from_end(self, k):
+        current = self.head
+        arr = []
+        if k < 0:
+            return 'index can\'t be less the zero'
+        while current:
+            arr.append(current)
+            current = current.next
+        if len(arr) < k:
+            return 'index not found'
+        arr.reverse()
+        if k == len(arr):
+            k = k -1
+        return arr[k].value
+
+########################88888############################################
