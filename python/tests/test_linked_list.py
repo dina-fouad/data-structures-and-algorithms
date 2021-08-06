@@ -58,4 +58,3 @@ def test_str():
     ll.insert(3)
     assert ll.__str__() == "{'3'} ->{'2'} ->{'1'} ->"
 
-
