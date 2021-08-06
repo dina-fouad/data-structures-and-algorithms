@@ -8,3 +8,9 @@ it was hard to deal with 2 classes , but in general was good
 O(n) for str function
 
 ## API
+
+
+
+## whitebord code06
+![](./code06.jpg)
+

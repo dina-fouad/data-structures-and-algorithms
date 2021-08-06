@@ -36,37 +36,59 @@ class LinkedList():
             else :
                 current=current.next
         return False
+##########################66666##########################################
 
-######## code challange 7 ##########
 
-
-def kthFromEnd(self,k):
-
-        if k<0:
-            return "Can't enter negative input"
-        list=[]
-        current = self.head
-        while current:
-            list+=[current.value]
-            current=current.next
-        if k==0:
-            return list[-1]
+    def append(self,value):
+        node1=Node(value)
+        if not self.head:
+            self.head=node1
         else:
-            if k>=len(list):
-                return 'Exception'
-            return list[(k*-1)-1]
-######## code challange 8 ##########
-def zipLists(test, test2):
-    current1 = test.head
-    current2 = test2.head
-    while current1 and current2:
-        save1 = current1.next
-        save2 = current2.next
+            current=self.head
+            while current.next is not None:
+                current=current.next
+            current.next=node1
 
-        current1.next = current2
-        current2.next = save1
+    def insert_before(self,value,new_value):
 
-        current1 = save1
-        current2 = save2
+        new_node = Node(new_value)
+        current = self.head
+        if not self.head:
+            self.head = new_node
+        else:
+            if current.value == value:
+                th_node = self.head
+                self.head = new_node
+                new_node.next = th_node
+                return
+            else:
+                    current = self.head
+            while current.next :
+                if current.next.value == value:
+                    th_node = current.next
+                    current.next = new_node
+                    new_node.next = th_node
+                    return
+                else:
+                    current = current.next
+            return
 
-    return test
+    def insert_after(self, value, new_value):
+
+        new_node = Node(new_value)
+        current = self.head
+        if not self.head:
+                self.head = new_node
+        else:
+            current = self.head
+            while current.next != None:
+                if current.next.value == value:
+                    current = current.next
+                    old_node = current.next
+                    current.next = new_node
+                    new_node.next = old_node
+                    return
+                else:
+                    current = current.next
+            return
+########################777777############################################
