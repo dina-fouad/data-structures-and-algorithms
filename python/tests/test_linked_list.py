@@ -5,89 +5,57 @@ import pytest
 
 from linked_list.linked_list import LinkedList,Node
 
+def test_instance(): ## 1 ## 1
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert isinstance(ll, LinkedList)
 
-# test creating a linked list
-def test_linkedlist():
-   assert LinkedList()
+def test_insert():
+    l1=LinkedList()
+    value=100
+    l1.insert(value)
+    actual1=l1.head.value
+    actual2=l1.head.next
+    excepted1=100
+    excepted2=None
+    assert actual1==excepted1
+    assert actual2==excepted2
 
-
-
-
-def test_includes_method():
-    list = LinkedList()
-    list.insert(17)
-    assert list.head.value == 17
-
-def test__str__():
-    list = LinkedList()
-    list.insert('c')
-    list.insert('b')
-    list.insert('a')
-    actual = list.__str__()
-    expected = "{ a } -> { b } -> { c } -> NULL"
-    assert actual == expected
-
-
-######## code challange 6 ##########
-
-def test_append():
-    test=LinkedList()
-    test.insert(40)
-    test.insert(50)
-    test.insert(49)
-    test.appendList(90)
-    expected="49 -> 50 -> 40 -> 90 -> NULL"
-    actual=test.__str__()
-    assert actual==expected
-
-def test_append_mid():
-    test=LinkedList()
-    test.insert(40)
-    test.insert(50)
-    test.insert(49)
-    test.appendList(90)
-    test.appendList(100)
-    expected="49 -> 50 -> 40 -> 90 -> 100 -> NULL"
-    actual=test.__str__()
-    assert actual==expected
+def test_head():
+    l1=LinkedList()
+    node1=l1.insert('200')
+    assert l1.head.value=='200'
 
 
-def test_insertBefore():
-    test=LinkedList()
-    test.insert(40)
-    test.insert(50)
-    test.insert(49)
-    test.insertBefore(40,50)
-    expected="49 -> 50 -> 40 -> 90 -> NULL"
-    actual=test.__str__()
-    assert actual==expected
 
-def test_insertBefore_first():
-    test=LinkedList()
-    test.insert(40)
-    test.insert(50)
-    test.insert(49)
-    test.insertBefore(49,30)
-    expected="30 -> 49 -> 50 -> 40 -> 90 -> NULL"
-    actual=test.__str__()
-    assert actual==expected
+def test_fisrt_elment(): 
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert ll.head.value == 3
 
-def test_insertAfter():
-    test=LinkedList()
-    test.insert(90)
-    test.insert(50)
-    test.insert(49)
-    test.insertAfter(50,40)
-    expected="49 -> 50 -> 40 -> 90 -> NULL"
-    actual=test.__str__()
-    assert actual==expected
+def test_false_value():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert ll.includes(5) == False
 
-def test_insertAfter_last():
-    test=LinkedList()
-    test.insert(90)
-    test.insert(50)
-    test.insert(49)
-    test.insertAfter(40,90)
-    expected="49 -> 50 -> 40 -> 90 -> NULL"
-    actual=test.__str__()
-    assert actual==expected
+def test_true():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert ll.includes(2) == True
+
+def test_str():
+    ll = LinkedList()
+    ll.insert(1)
+    ll.insert(2)
+    ll.insert(3)
+    assert ll.__str__() == "{'3'} ->{'2'} ->{'1'} ->"
+
+
