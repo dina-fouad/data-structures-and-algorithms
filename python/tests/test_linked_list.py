@@ -27,7 +27,8 @@ def test_head():
 
 
 
-def test_fisrt_elment():
+
+def test_fisrt_elment(): 
     ll = LinkedList()
     ll.insert(1)
     ll.insert(2)
@@ -54,6 +55,7 @@ def test_str():
     ll.insert(2)
     ll.insert(3)
     assert ll.__str__() == "{'3'} ->{'2'} ->{'1'} ->"
+
 
 ########################66666############################################
 
@@ -97,4 +99,3 @@ def test_insert_after():
     assert ll.__str__() == "{'7'} ->{'5'} ->{'6'} ->{'8'} ->"
 
     ########################77777############################################
-

@@ -4,6 +4,7 @@ class Node():
         self.value = value
         self.next = None
 
+
 class LinkedList():
 
     def __init__(self):
@@ -36,6 +37,7 @@ class LinkedList():
                 current=current.next
         return False
 ##########################66666##########################################
+
 
     def append(self,value):
         node1=Node(value)

@@ -10,5 +10,7 @@ O(n) for str function
 ## API
 
 
+
 ## whitebord code06
 ![](./code06.jpg)
+
