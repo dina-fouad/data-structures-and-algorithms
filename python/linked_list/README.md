@@ -13,3 +13,7 @@ O(n) for str function
 ## whitebord code06
 ![](./code06.jpg)
 
+
+## whitebord code07
+![](./code07.jpg)
+
