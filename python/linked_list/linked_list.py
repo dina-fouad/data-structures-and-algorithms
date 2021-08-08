@@ -110,3 +110,23 @@ class LinkedList():
         return arr[k].value
 
 ########################88888############################################
+
+
+def ziplist(ll1, ll2):
+
+    new_ll=LinkedList()
+    max_len=max(ll1.length,ll2.length)
+    ll1_curent=ll1.head
+    ll2_curent=ll2.head
+    if ll1.length or ll2.length:
+        for i in range(max_len):
+            if ll1_curent:
+                new_ll.append(ll1_curent.value)
+                ll1_curent=ll1_curent.next
+            if ll2_curent:
+                new_ll.append(ll2_curent.value)
+                ll2_curent=ll2_curent.next
+        print(new_ll.to_string())
+        return new_ll
+    else:
+        return "Sorry invalid input"

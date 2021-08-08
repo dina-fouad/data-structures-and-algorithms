@@ -1,5 +1,5 @@
 import pytest
-from stack_and_queue import Queue, Stack, Node, StackEmptyException
+from stack_and_queue import  PseudoQueue, Queue, Stack, Node, StackEmptyException
 
 
 
@@ -101,9 +101,28 @@ def test_instantiate_queue():
     queue = Queue()
     assert queue
 
-def test_peek_empty_queue_exception(): 
+def test_peek_empty_queue_exception():
 
     queue = Queue()
     actual = queue.peek()
     expected = "Queue is empty"
     assert actual == expected
+#############################################################
+
+
+
+
+def queue_vals():
+    queue = PseudoQueue()
+    queue.enqueue(8)
+    queue.enqueue('hi')
+    queue.enqueue(-4)
+    queue.enqueue(6)
+    return queue
+
+def test_empty_queue():
+    queue=PseudoQueue()
+    expected = "can't dequeue from empty stack "
+    actual =queue.dequeue()
+    assert actual == expected
+
