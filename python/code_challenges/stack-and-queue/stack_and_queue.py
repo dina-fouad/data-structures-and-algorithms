@@ -77,3 +77,27 @@ class Queue():
 
     def isEmpty(self):
         return self.front==None
+############################################################################
+
+class PseudoQueue():
+    def __init__ (self,) :
+        self.stack1= Stack()
+        self.stack2= Stack()
+
+
+
+    def enqueue(self,value):
+        self.stack1.push(value)
+        return self.stack1
+
+
+    def dequeue(self):
+       if self.stack2.isEmpty():
+          while self.stack1.top :
+              self.stack2.push(self.stack2.pop())
+              return(self.stack2.pop())
+
+
+
+
+

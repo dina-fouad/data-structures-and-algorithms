@@ -1,6 +1,6 @@
 
 
-from linked_list.linked_list import LinkedList,Node
+from linked_list.linked_list import LinkedList,Node, ziplist
 
 def test_instance():
     ll = LinkedList()
@@ -145,3 +145,18 @@ def test_happy():
     expected = 1
     assert actual == expected
 ########################8888############################################
+def test_linked_list_zipped_list():
+    test= LinkedList()
+    test.append(4)
+    test.append(-1)
+    test.append('s')
+    test.insert_before(4, 5)
+    test.insert_after(-1, 98)
+    test2= LinkedList()
+    test2.append(7)
+    test2.append(-8)
+    test2.insert_after(7, 8)
+    actual = str(ziplist(test,test2))
+    actual = str((test,test2))
+    expected = "{5} ->{7} ->{4} ->{8} ->{-1} ->{-8} ->{98} ->{'s'} ->NULL"
+    assert actual == expected
