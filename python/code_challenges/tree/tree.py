@@ -83,3 +83,18 @@ class Binary_Search_Tree(Binary_Tree):
                     current = current.right
                 else:
                     return False
+
+                    #####code challenge 16 ###########
+
+
+    def find_tree_max_number(self):
+        max_number =0
+        if not self.root.value :
+            return " empty Tree"
+
+        else:
+            list = self.in_order()
+            for n in list :
+                if n > max_number:
+                    max_number= n
+        return max_number

@@ -1,9 +1,10 @@
-## Trees
-Binary Trees and Binary Search Trees are a data structure often used in software. A Binary Tree or Binary Search Tree is an example of what a file system may look like. For balanced Binary Search Trees search time is O(log n).
-## Challenge
-Write instance methods of a Binary Tree pre-order, in-order and post-order which show a list of the tree values in these traversal orders. Write instance methods of a Binary Search Tree add and contains which update and read a Binary Search Tree for a value in time O(log n).
+# Challenge Summary
+Get max value : using previous methods get the max of the values in list.
 
-write method in BinaryTree class that find the maximum value in a numaric tree
+## Whiteboard Process
+![](./code16.jpg)
 
 ## Approach & Efficiency
-API methods of instances of a Binary Tree and a Binary Search Tree pre-order, in-order and post-order take Big O time O(n) and space O(1). The API method of instances of a Binary Search Tree add and contains take Big O time O(log n) and space O(1).
+define tree _max function which take self check if the root hasn't value and return empty value . inherit the list of any of previous methods. loop over it and get the max value and return it
+
+
