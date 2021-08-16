@@ -1,5 +1,3 @@
-
-
 class Node:
     def __init__(self, value = None):
         self.value = value
@@ -83,3 +81,40 @@ class Binary_Search_Tree(Binary_Tree):
                     current = current.right
                 else:
                     return False
+
+                    #####code challenge 16 ###########
+
+
+    def find_tree_max_number(self):
+        max_number =0
+        if not self.root.value :
+            return " empty Tree"
+
+        else:
+            list = self.in_order()
+            for n in list :
+                if n > max_number:
+                    max_number= n
+        return max_number
+
+#####code challenge 17 ###########
+
+    def breadth_first(tree):
+
+        if tree.root is None :
+            return "empty"
+
+        else :
+            visited=[]
+            queue = []
+            queue+=[tree.root]
+            while queue :
+                current_value = queue[0]
+                if current_value.left:
+                    queue+=[current_value.left]
+                if current_value.right:
+                    queue+=[current_value.right]
+
+                visited += [queue.pop(0).value]
+
+        return visited

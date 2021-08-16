@@ -1,6 +1,6 @@
 import pytest
 
-from code_challenges.tree.tree import Tree, Node ,Binary_Tree
+from code_challenges.tree.tree import Tree, Node ,Binary_Tree , find_tree_max_number
 
 
 def test_empty_tree():
@@ -31,5 +31,15 @@ def test_success_return_collection_in_order(fixture_tree):
     result = fixture_tree.in_order()
     assert result == [2, 4, -1, 5, 16, 14, 20]
 
+ #####code challenge 16 ###########
 
+def test_max(tree_test):
+    expected = 12
+    actual = tree_test.find_tree_max_number()
+    assert actual == expected
 
+#####code challenge 17 ###########
+def test_breadth_first(tree_test):
+    expected = [3, 12, 2, 4, 5, 1, 6]
+    actual = tree_test.breadth_first()
+    assert actual == expected
