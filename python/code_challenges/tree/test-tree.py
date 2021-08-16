@@ -37,3 +37,11 @@ def test_max(tree_test):
     expected = 12
     actual = tree_test.find_tree_max_number()
     assert actual == expected
+
+
+#####code challenge 17 ###########
+def test_breadth_first(tree_test):
+    expected = [3, 12, 2, 4, 5, 1, 6]
+    actual = tree_test.breadth_first()
+    assert actual == expected
+
