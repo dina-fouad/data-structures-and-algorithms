@@ -97,6 +97,7 @@ class Binary_Search_Tree(Binary_Tree):
                     max_number= n
         return max_number
 
+
 #####code challenge 17 ###########
 
     def breadth_first(tree):
@@ -118,3 +119,4 @@ class Binary_Search_Tree(Binary_Tree):
                 visited += [queue.pop(0).value]
 
         return visited
+
