@@ -59,18 +59,13 @@ class Graph:
     def get_neighbors(self, vertex):
         return self._adjacency_list.get(vertex, [])
 
-#############################################################
+###################CHALLENGE CODE 38##########################################
 
 
-    def depthfirst(self,v,visited):
-        visited = []
-        for neighbour in self.graph[v]:
-            if neighbour not in visited:
-                self.depthfirst(neighbour,visited)
-    def DFS(self):
-        visited=set()
-        for vertex in self.graph:
-            if vertex not in visited:
-                self.depthfirst(vertex,visited)
- 
-
+def dfs(visited, graph, node):
+    visited = set()
+    if node not in visited:
+        print (node)
+        visited.add(node)
+        for neighbour in graph[node]:
+            dfs(visited, graph, neighbour)
